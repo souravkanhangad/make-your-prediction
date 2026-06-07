@@ -19,15 +19,15 @@ export default async function Dashboard() {
   // Fetch user's contests
   const userContests = await db.select()
     .from(contests)
-    .where(eq(contests.userId, session.user.id))
+    .where(eq(contests.userId, session.user.id as string))
     .orderBy(desc(contests.createdAt));
 
   // Placeholder stats for now
   const stats = {
     totalContests: userContests.length,
     totalPredictions: 0, // Would need a join or separate query
-    activeContests: userContests.filter(c => c.status === 'open').length,
-    completedContests: userContests.filter(c => c.status === 'completed').length,
+    activeContests: userContests.filter((c: any) => c.status === 'open').length,
+    completedContests: userContests.filter((c: any) => c.status === 'completed').length,
   };
 
   return (
@@ -66,7 +66,7 @@ export default async function Dashboard() {
                 You have not created any contests yet.
               </li>
             ) : (
-              userContests.map((contest) => (
+              userContests.map((contest: any) => (
                 <li key={contest.id} className="p-6 hover:bg-slate-50 transition-colors">
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
