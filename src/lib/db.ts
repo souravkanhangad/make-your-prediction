@@ -11,7 +11,7 @@ export function getDb() {
     const client = createClient({ url: 'file:local.db' });
     return drizzleLibSQL(client, { schema }) as any;
   } else {
-    const d1 = getRequestContext().env.DB;
+    const d1 = (getRequestContext().env as any).DB;
     if (!d1) {
       throw new Error('D1 Database binding "DB" is not available.');
     }
