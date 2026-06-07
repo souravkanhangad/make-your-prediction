@@ -1,5 +1,7 @@
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
+
+export const runtime = 'edge';
 import Navbar from "@/components/Navbar";
 import CreateContestForm from "@/components/CreateContestForm";
 

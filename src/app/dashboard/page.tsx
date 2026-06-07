@@ -1,5 +1,7 @@
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
+
+export const runtime = 'edge';
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { Plus, Trophy, Activity, CheckCircle2, BarChart2, Share2, Eye, Edit, Award } from "lucide-react";

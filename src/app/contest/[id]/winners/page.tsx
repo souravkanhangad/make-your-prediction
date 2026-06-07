@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Award, CheckCircle2, ShieldCheck } from "lucide-react";
+
+export const runtime = 'edge';
 import AdSpace from "@/components/AdSpace";
 import { notFound } from "next/navigation";
 

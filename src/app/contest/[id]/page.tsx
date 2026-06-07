@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import PredictionForm from "@/components/PredictionForm";
+
+export const runtime = 'edge';
 import CountdownTimer from "@/components/CountdownTimer";
 import AdSpace from "@/components/AdSpace";
 import { notFound } from "next/navigation";

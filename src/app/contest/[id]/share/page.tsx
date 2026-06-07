@@ -1,5 +1,7 @@
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
+
+export const runtime = 'edge';
 import Navbar from "@/components/Navbar";
 import ShareContestClient from "@/components/ShareContestClient";
 import { getDb } from "@/lib/db";

@@ -3,6 +3,8 @@ import { redirect } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import EnterResultForm from "@/components/EnterResultForm";
 
+export const runtime = 'edge';
+
 export default async function EnterResultPage({ params }: { params: Promise<{ id: string }> }) {
   const session = await auth();
   

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+
+export const runtime = 'edge';
 import { ArrowRight, Trophy, Share2, Users, Wand2, Gift } from "lucide-react";
 
 export default function Home() {

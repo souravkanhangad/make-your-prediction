@@ -2,6 +2,8 @@ import { signIn } from "@/lib/auth";
 import { GoogleIcon } from "@/components/icons/GoogleIcon";
 import Navbar from "@/components/Navbar";
 
+export const runtime = 'edge';
+
 export default function SignInPage() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
