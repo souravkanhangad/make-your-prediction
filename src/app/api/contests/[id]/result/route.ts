@@ -53,10 +53,10 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       await db.insert(winners).values({
         id: crypto.randomUUID(),
         contestId: id,
-        predictionId: w.prediction.id,
-        isExactMatch: w.isExactMatch,
-        isRandomlySelected: w.isRandomlySelected,
-        penaltyScore: w.penaltyScore,
+        predictionId: w.predictionId,
+        isExactMatch: w.selectionMethod === 'exact',
+        isRandomlySelected: w.randomDraw,
+        penaltyScore: 0,
       });
     }
 
